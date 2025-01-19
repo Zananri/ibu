@@ -1,0 +1,133 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Gambar Header -->
+{% if header_image %}
+<section class="header-section" style="background-image: url('{{ header_image.image.url }}');">
+    <div class="overlay">
+        <h1 class="header-text">Selamat Datang di Griya Syamil</h1>
+    </div>
+</section>
+{% else %}
+<section class="header-section" style="background-image: url('{% static 'images/default-header.jpg' %}');">
+    <div class="overlay">
+        <h1 class="header-text">Selamat Datang di Website Kesehatan</h1>
+    </div>
+</section>
+{% endif %}
+
+<!-- Tentang Griya Syamil -->
+<section class="container py-5">
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <h2>Tentang Griya Syamil</h2>
+            <p>Griya Syamil adalah usaha yang bergerak pada bidang kesehatan, yang tata cara pengobatannya mengikuti
+                sunnah-sunnah Nabi Muhammad SAW,
+                dan menggunakan obat yang berbahan dasar herbal.
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <img src="{% static 'images/GRIYA_SYAMIL.png' %}" class="img-fluid rounded-img lazy-img"
+                alt="Informasi Kesehatan">
+        </div>
+    </div>
+</section>
+
+<!-- <section class="gallery-section" style="background-color: rgba(211, 211, 211, 0.8); padding: 60px 0;">
+    <div class="gallery-container">
+        {% for image in galleries %}
+            <div class="gallery-item">
+                <img src="{{ image.image.url }}" alt="{{ image.description }}" class="gallery-image">
+                <div class="gallery-description">{{ image.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</section> -->
+
+<!-- Galeri Section -->
+<section class="gallery-section" style="background-color: rgba(119, 178, 84, 0.8); padding: 60px 0;">
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="{% static 'images/Ruangan.jpg' %}" alt="Gallery Image 1" class="gallery-image">
+            <div class="gallery-description">Ruangan Praktik</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/bekam.jpg' %}" alt="Gallery Image 2" class="gallery-image">
+            <div class="gallery-description">Bekam</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/akupuntur.jpg' %}" alt="Gallery Image 3" class="gallery-image">
+            <div class="gallery-description">Akupuntur</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/lintah.jpg' %}" alt="Gallery Image 4" class="gallery-image">
+            <div class="gallery-description">Terapi Lintah</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/topung.jpg' %}" alt="Gallery Image 5" class="gallery-image">
+            <div class="gallery-description">Totok Punggung</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/konsul.jpg' %}" alt="Gallery Image 6" class="gallery-image">
+            <div class="gallery-description">Konsultasi Kesehatan</div>
+        </div>
+       
+        <!-- Tambahkan gambar baru di sini -->
+    </div>
+</section>
+
+<!-- Penjelasan Thibbun Nabawi -->
+<section class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12">
+            <h2>Thibbun Nabawi</h2>
+            <p>Thibbun Nabawi adalah metode pengobatan yang diajarkan oleh Nabi Muhammad SAW. Metode ini mengedepankan
+                penggunaan bahan alami dan doa sebagai bagian dari penyembuhan, sesuai dengan ajaran Islam. Thibbun Nabawi
+                tidak hanya fokus pada fisik tetapi juga pada keseimbangan spiritual dan mental.</p>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <img src="{% static 'images/muhammad.jpg' %}" class="img-fluid rounded-img lazy-img" alt="Thibbun Nabawi">
+        </div>
+    </div>
+</section>
+
+<section class="contact-section py-5 " id="contact" style="background-color: rgba(119, 178, 84, 0.8);">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h2 class="section-title">CONTACT GRIYA SYAMIL</h2>
+                <p class="section-subtitle">Hubungi kami melalui form atau WhatsApp</p>
+            </div>
+        </div>
+
+        <!-- Contact Links Section -->
+        <div class="row justify-content-center">
+            <!-- WhatsApp Section -->
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card contact-card shadow py-5 px-4 text-center">
+                    <a href="https://wa.me/6285717484368" target="_blank" class="whatsapp-link text-decoration-none">
+                        <img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp Icon" class="contact-icon mb-3">
+                        <p class="fw-bold text-dark">Chat via WhatsApp</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gmail Section -->
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card contact-card shadow py-5 px-4 text-center">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahrofi034@gmail.com" target="_blank" class="text-decoration-none">
+                        <span class="material-icons mb-3" style="font-size: 96px; color: #4285F4;">email</span>
+                        <p class="fw-bold text-dark">Send Email</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+
+{% endblock %}
